@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import './App.css'; // Import the CSS file here
 
 function App() {
   const [data, setData] = useState(null);
@@ -48,14 +49,14 @@ function App() {
             Authenticate with Dexcom
           </button>
         )}
-        {data ? (
+      </header>
+      <div>
+        {data && (
           <div>
             <pre>{JSON.stringify(data, null, 2)}</pre>
           </div>
-        ) : (
-          <p>Loading...</p>
         )}
-      </header>
+      </div>
     </div>
   );
 }
